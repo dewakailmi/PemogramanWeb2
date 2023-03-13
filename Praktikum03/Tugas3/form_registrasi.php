@@ -12,24 +12,24 @@
 <body>
     <div class="container">
         <h2>Registrasi IT Club GDSC</h2>
-    <form method="POST">
+        <form method="POST">
         <div class="form-group row">
             <label for="nim" class="col-4 col-form-label">NIM</label> 
             <div class="col-8">
             <input id="nim" name="nim" placeholder="Masukkan NIM" type="text" class="form-control" required="required">
-        </div>
+            </div>
         </div>
         <div class="form-group row">
             <label for="nama" class="col-4 col-form-label">Nama</label> 
             <div class="col-8">
             <input id="nama" name="nama" placeholder="Masukkan Nama" type="text" class="form-control" required="required">
-        </div>
+            </div>
         </div>
         <div class="form-group row">
             <label for="email" class="col-4 col-form-label">Email</label> 
-        <div class="col-8">
+            <div class="col-8">
             <input id="email" name="email" placeholder="Masukkan Email" type="text" class="form-control" required="required">
-        </div>
+            </div>
         </div>
         <div class="form-group row">
             <label class="col-4">Jenis Kelamin</label> 
@@ -58,12 +58,12 @@
         <label for="program_studi" class="col-4 col-form-label">Program Studi</label> 
         <div class="col-8">
           <select id="program_studi" name="program_studi" class="custom-select" required="required">
-          <?php foreach($program_studi as $key => $value){ ?>
-          <option value="<?= $value; ?>"><?= $value; ?></option>
-          <?php } ?>
-          </select>
-        </div>
-        </div>
+             <?php foreach($program_studi as $key => $value){ ?>
+                <option value="<?= $value; ?>"><?= $value; ?></option>
+             <?php } ?>
+            </select>
+            </div>
+    </div>
         <div class="form-group row">
             <label class="col-4">Skill Programming</label> 
         <div class="col-8">
@@ -89,7 +89,7 @@
             <th>jenis kelamin</th>
             <th>domisili</th>
             <th>program studi </th>
-            <th>skill </th>
+            <th>skill programming </th>
             <th>skor</th>
             <th>predikat</th>
         </tr>
@@ -103,11 +103,11 @@
             $skill_user = $_POST['skill'];
             $skor = 0;
             
-                    // loop melalui setiap item
+                    // Loop melalui setiap Item
                     foreach($skill_user as $skill) {
-                        // cek apakah checkbox terkait telah dicentang
+                        // cek apakah Checkbox terkait telah dicentang
                         if($skill == 'HTML') {
-                            // tambahkan nilai item ke total
+                            // Tambahkan Nilai Item ke Total
                             $skor = $skor + 10;
                         }elseif($skill == 'CSS') {
                             $skor = $skor + 10;
@@ -130,7 +130,7 @@
             }elseif($skor >= 35 && $skor < 50) {
                 $predikat = "Kurang";
             }else{
-                $predikat = "Kurang Belajar";
+                $predikat = "Sangat Ahli";
             }
             
             
