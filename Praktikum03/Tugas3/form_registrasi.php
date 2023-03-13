@@ -123,14 +123,14 @@
             // predikat
             if ($skor >= 90 && $skor < 100) {
                 $predikat = "Sangat Ahli";
-            }elseif($skor >= 75 && $skor < 90) {
+            }elseif($skor >= 75 && $skor > 90) {
                 $predikat = "Ahli";
-            }elseif($skor >= 50 && $skor < 75) {
+            }elseif($skor >= 50 && $skor > 75) {
                 $predikat = "Biasa";
             }elseif($skor >= 35 && $skor < 50) {
                 $predikat = "Kurang";
             }else{
-                $predikat = "Sangat Ahli";
+                $predikat = "Kurang Belajar";
             }
             
             
