@@ -121,7 +121,7 @@
                     }
             
             // predikat
-            if ($skor >= 90 && $skor < 100) {
+            if ($skor >= 90 && $skor < 110) {
                 $predikat = "Sangat Ahli";
             }elseif($skor >= 75 && $skor > 90) {
                 $predikat = "Ahli";
